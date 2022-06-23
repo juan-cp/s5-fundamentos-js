@@ -5,8 +5,13 @@ let nota=0;
 function Promedio (){
 
     for (i=1; i<=5; i++){
-    nota=parseInt(window.prompt("Ingrese nota"));
-    suma=suma+nota;
+        nota=parseInt(window.prompt("Ingrese nota"));
+        if (nota<0 || nota>100){
+            nota=parseInt(window.prompt("Valor incorrecto de nota. Ingrese nota nuevamente"));
+            suma=suma+nota;}
+        else{
+            suma=suma+nota;}
+
     }
 
     Prom=suma/5;
